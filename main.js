@@ -13,13 +13,11 @@ camera.position.y = 7;
 const sceneManager = new SceneManager(camera);
 sceneManager.addScene(sceneStart);
 sceneManager.addScene(sceneComposer);
-sceneManager.changeScene("start");
+sceneManager.changeScene("composer");
 
 function onDocumentKeyDown(event) {
     var keyCode = event.key;
-    console.log(sceneComposer.ingredients);
-    sceneComposer.ingredients[sceneComposer.index].get().position.x = 0;
-    sceneComposer.ingredients[sceneComposer.index].get().rotation.x = 0;
+    sceneComposer.ingredients[sceneComposer.index].get().rotation.x = 0.5;
     if (keyCode == "ArrowUp") {
         sceneComposer.index = sceneComposer.index == sceneComposer.ingredients.length - 1 ? 0 : sceneComposer.index + 1;
     } else if (keyCode == "ArrowDown") {
