@@ -17,6 +17,7 @@ class Door extends Object {
     this.dt += delta;
     if (this.dt >= 0.010) {
       if (this.leftDoor.rotation.y < 1.5 && this.rightDoor.rotation.y > -1.5) {
+        console.log(this.leftDoor.rotation);
         this.leftDoor.rotation.y += 0.01;
         this.rightDoor.rotation.y -= 0.01;
       }
