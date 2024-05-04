@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+
 import SceneManager from './SceneManager';
 import Object from '../Object';
 

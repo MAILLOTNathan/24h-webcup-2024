@@ -14,11 +14,10 @@ class SceneStart extends AScene {
             let dt = sceneManager.getClock().getDelta();
             object.update(dt);
         }
-        console.log(this.camera.position);
         if (this.camera.position.z > 0)
             this.camera.position.z -= 0.01;
         else
-            sceneManager.changeScene("menu");
+            sceneManager.changeScene("composer");
     }
 }
 
