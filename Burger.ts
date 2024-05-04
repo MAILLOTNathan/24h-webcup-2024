@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-import Ingredient from './Ingredient';
+// import Ingredient from './Ingredient';
 
 export default class Burger {
   position : THREE.Vector3;
