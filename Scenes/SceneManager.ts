@@ -41,7 +41,7 @@ export default class SceneManager {
         return res;
     }
 
-    update() {
-        this.getCurrentScene().update(this.camera, this);
+    update(dt: number) {
+        this.getCurrentScene().update(dt, this.camera, this);
     }
 }

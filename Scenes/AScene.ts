@@ -32,5 +32,5 @@ export default abstract class AScene {
         return this.name;
     }
 
-    abstract update(camera: THREE.PerspectiveCamera, sceneManager: SceneManager);
+    abstract update(dt: number, camera: THREE.PerspectiveCamera, sceneManager: SceneManager);
 }
