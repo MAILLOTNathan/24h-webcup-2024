@@ -11,13 +11,13 @@ export default class SceneManager {
 
     constructor(camera: THREE.PerspectiveCamera) {
         this.currentScene = "";
-        this.scenes = new Map();
+        this.scenes = new Map<String, AScene>();
         this.dt = new Clock(true);
         this.camera = camera;
     }
 
     addScene(scene: AScene) {
-        scene.setCamera(this.camera);
+        // scene.setCamera(this.camera);
         this.scenes.set(scene.getName(), scene);
     }
 
@@ -42,6 +42,6 @@ export default class SceneManager {
     }
 
     update() {
-        this.getCurrentScene().update(this);
+        this.getCurrentScene().update(this.camera, this);
     }
 }

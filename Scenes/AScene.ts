@@ -4,21 +4,15 @@ import SceneManager from './SceneManager';
 import Object from '../Object';
 
 export default abstract class AScene {
-    name: String;
+    name: string;
     scene: THREE.Scene;
-    camera: THREE.PerspectiveCamera;
     lights: Array<THREE.DirectionalLight>;
     objects;
 
-    constructor(name: String) {
+    constructor(name: string) {
         this.name = name;
         this.scene = new THREE.Scene();
         this.lights = [];
-    }
-
-    setCamera(camera: THREE.PerspectiveCamera) {
-        this.camera = camera;
-        this.scene.add(camera);
     }
 
     addLight(light: THREE.DirectionalLight) {
@@ -38,5 +32,5 @@ export default abstract class AScene {
         return this.name;
     }
 
-    abstract update(sceneManager: SceneManager);
+    abstract update(camera: THREE.PerspectiveCamera, sceneManager: SceneManager);
 }

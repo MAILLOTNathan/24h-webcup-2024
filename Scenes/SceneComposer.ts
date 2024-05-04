@@ -31,10 +31,10 @@ class SceneComposer extends AScene {
         this.index = 0;
     }
 
-    update(sceneManager: SceneManager) {
+    update(camera: THREE.PerspectiveCamera, sceneManager: SceneManager) {
         this.selector.get().position.y = this.objects[this.index].get().position.y;
         this.objects[this.index].get().rotation.x = 0.8;
-        this.selector.update();
+        this.selector.update(sceneManager.dt.getDelta());
     }
 
     setSelector (selector: Selector) {

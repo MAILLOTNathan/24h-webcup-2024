@@ -15,9 +15,8 @@ sceneManager.addScene(sceneStart);
 sceneManager.addScene(sceneComposer);
 sceneManager.changeScene("start");
 
-
+console.log(sceneManager.scenes)
 function onDocumentKeyDown(event) {
-    console.log(sceneComposer.objects);
     var keyCode = event.key;
     sceneComposer.objects[sceneComposer.index].get().position.x = 0;
     sceneComposer.objects[sceneComposer.index].get().rotation.x = 0;
@@ -29,10 +28,20 @@ function onDocumentKeyDown(event) {
     sceneComposer.objects[sceneComposer.index].get().position.x = 1;
 }
 
+function launchAnimation(event) {
+    console.log(event);
+    if (event.key == "Enter" || event.type == "touchend") {
+        sceneStart.launchAnimation();
+    }
+
+}
+document.addEventListener("touchend", launchAnimation, false);
+document.addEventListener("keypress", launchAnimation, false);
 document.addEventListener("keydown", onDocumentKeyDown, false);
 function animate() {
     requestAnimationFrame(animate);
     sceneManager.update();
+    console.log(sceneManager.getCurrentScene().getScene())
     renderer.render(sceneManager.getCurrentScene().getScene(), camera);
 }
 
