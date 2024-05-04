@@ -4,10 +4,86 @@
 		<meta charset="utf-8">
 		<title>Questern</title>
 		<style>
-			body { margin: 0; }
+:root {
+				--body-color: #010c15;
+				--text-color: #7e8294;
+				--hover-color: #ebd9ff;
+				--accent-color: #cc0404;
+				--underline-thickness: 3px;
+				color-scheme: dark;
+			  }
+
+			body {
+				height: 100vh;
+				display: grid;
+				overflow: hidden;
+				background-color: var(--body-color);
+			}
+
+			nav {
+				margin: 0;
+				margin-top: 2em;
+				padding: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-transform: uppercase;
+				font: bold 1.5rem sans-serif;
+
+				& a {
+					color: var(--text-color);
+				    cursor: pointer;
+				    overflow: hidden;
+				    transition: 0.3s;
+				    position: relative;
+				    text-decoration: none;
+				    padding: 0 0.5em 0.25em;
+
+				  	&::before {
+						content: "";
+						scale: 0 1;
+						position: absolute;
+						background: var(--accent-color);
+						transition: 0.3s, translate 0s 0.3s;
+						inset: calc(100% - var(--underline-thickness)) 0 0 0;
+					}
+
+				  	/*&:hover {
+						color: var(--hover-color);
+
+						&::before {
+							translate: 0;
+							transition: 0.3s;
+						}
+				  	}*/
+				}
+
+				&:hover {
+				  	& a::before {
+						scale: 1;
+				  	}
+
+				  	& a:has(~ a:hover)::before {
+						translate: 100% 0;
+						transition: 0.2s 0.2s, scale 0s 0.4s;
+				  	}
+
+					& a:hover ~ a::before {
+						translate: -100% 0;
+						transition: 0.2s 0.2s, scale 0s 0.4s;
+					}
+				}
+			}
 		</style>
 	</head>
 	<body>
+		<nav >
+			<a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Pricing</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+		</nav>
 		<script type="module" src="/main.js"></script>
 	</body>
 </html>
