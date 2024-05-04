@@ -222,8 +222,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-top: 50vh; */
-  margin-bottom: 10vh;
+  margin-top: 75vh;
 }
 
 .card-grid {
