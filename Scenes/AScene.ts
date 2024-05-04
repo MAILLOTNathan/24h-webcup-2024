@@ -27,7 +27,6 @@ export default abstract class AScene {
 
     addObject(object: Object) {
         this.objects.push(object);
-        this.scene.add(object);
     }
 
     getScene() {
