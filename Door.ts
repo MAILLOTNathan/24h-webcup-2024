@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import loadModel from './Loader';
 import Object from './Object';
 
 class Door extends Object {

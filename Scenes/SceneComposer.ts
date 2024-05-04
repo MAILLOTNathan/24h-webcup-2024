@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import AScene from "./AScene";
 import SceneManager from "./SceneManager";
 import Object from '../Object';
+import bar from '../Bar';
 
 import { BottomBun, TopBun, Steak, Tomato, Lettuce } from '../Ingredient';
 
@@ -47,6 +48,7 @@ class SceneComposer extends AScene {
 let sceneComposer = new SceneComposer();
 let light = new THREE.DirectionalLight(0xffffff, 1);
 let selector = new Selector(new THREE.BoxGeometry(0,0,0));
+let bar1= new bar(new THREE.BoxGeometry(0, 0, 0));
 const ingredients : any[] = [
     new BottomBun(new THREE.BoxGeometry(0, 0, 0)),
     new Steak(new THREE.BoxGeometry(0, 2, 0)),
@@ -57,7 +59,8 @@ const ingredients : any[] = [
 
 sceneComposer.setSelector(selector);
 
-
+await bar1.load(sceneComposer.scene);
+sceneComposer.addObject(bar1);
 for (let o of ingredients) {
     await o.load(sceneComposer.scene);
     sceneComposer.addObject(o);

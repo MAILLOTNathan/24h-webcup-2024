@@ -27,6 +27,7 @@ class SceneStart extends AScene {
         else {
             sceneManager.changeScene("composer");
             camera.position.z = 10;
+            camera.position.y = 2;
         }
     }
 }
