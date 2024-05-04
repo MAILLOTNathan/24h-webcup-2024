@@ -17,14 +17,15 @@ sceneManager.changeScene("start");
 
 function onDocumentKeyDown(event) {
     var keyCode = event.key;
-    sceneComposer.objects[sceneComposer.index].get().position.x = 0;
-    sceneComposer.objects[sceneComposer.index].get().rotation.x = 0;
+    console.log(sceneComposer.ingredients);
+    sceneComposer.ingredients[sceneComposer.index].get().position.x = 0;
+    sceneComposer.ingredients[sceneComposer.index].get().rotation.x = 0;
     if (keyCode == "ArrowUp") {
-        sceneComposer.index = sceneComposer.index == sceneComposer.objects.length - 1 ? 0 : sceneComposer.index + 1;
+        sceneComposer.index = sceneComposer.index == sceneComposer.ingredients.length - 1 ? 0 : sceneComposer.index + 1;
     } else if (keyCode == "ArrowDown") {
-        sceneComposer.index = sceneComposer.index == 0 ? sceneComposer.objects.length - 1 : sceneComposer.index - 1;
+        sceneComposer.index = sceneComposer.index == 0 ? sceneComposer.ingredients.length - 1 : sceneComposer.index - 1;
     }
-    sceneComposer.objects[sceneComposer.index].get().position.x = 1;
+    sceneComposer.ingredients[sceneComposer.index].get().position.x = 1;
 }
 
 function launchAnimation(event) {

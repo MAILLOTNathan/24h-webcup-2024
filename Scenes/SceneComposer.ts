@@ -25,10 +25,12 @@ class Selector extends Object {
 class SceneComposer extends AScene {
     index : any;
     selector : Selector;
+    ingredients : Object[];
 
     constructor() {
         super("composer");
         this.objects = [];
+        this.ingredients = [];
         this.index = 0;
     }
 
@@ -36,6 +38,15 @@ class SceneComposer extends AScene {
         this.selector.get().position.y = this.objects[this.index].get().position.y;
         this.objects[this.index].get().rotation.x = 0.8;
         this.selector.update(sceneManager.dt.getDelta());
+        camera.position.z = 25;
+        camera.position.y = -5;
+        camera.rotation.x = 0.5;
+
+    }
+
+    addIngredient(ingredient: Object) {
+        super.addObject(ingredient);
+        this.ingredients.push(ingredient);
     }
 
     setSelector (selector: Selector) {
@@ -63,9 +74,9 @@ await bar1.load(sceneComposer.scene);
 sceneComposer.addObject(bar1);
 for (let o of ingredients) {
     await o.load(sceneComposer.scene);
-    sceneComposer.addObject(o);
+    sceneComposer.addIngredient(o);
 }
 
-light.position.set(2, 10, 10);
+light.position.set(2, 10, 500);
 sceneComposer.addLight(light);
 export default sceneComposer;
