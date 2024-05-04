@@ -2,7 +2,10 @@ import * as THREE from 'three';
 
 import Object from './Object';
 
-export class Steak extends Object {
+export abstract class Ingredient extends Object {
+}
+
+export class Steak extends Ingredient  {
   constructor(position : THREE.BoxGeometry) {
     super(position);
   }

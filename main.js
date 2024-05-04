@@ -17,12 +17,16 @@ sceneManager.changeScene("composer");
 
 function onDocumentKeyDown(event) {
     var keyCode = event.key;
-    sceneComposer.ingredients[sceneComposer.index].get().rotation.x = 0.5;
     if (keyCode == "ArrowUp") {
+        sceneComposer.ingredients[sceneComposer.index].get().position.x = 0;
+        sceneComposer.ingredients[sceneComposer.index].get().rotation.x = 0.5;
         sceneComposer.index = sceneComposer.index == sceneComposer.ingredients.length - 1 ? 0 : sceneComposer.index + 1;
     } else if (keyCode == "ArrowDown") {
+        sceneComposer.ingredients[sceneComposer.index].get().position.x = 0;
+        sceneComposer.ingredients[sceneComposer.index].get().rotation.x = 0.5;
         sceneComposer.index = sceneComposer.index == 0 ? sceneComposer.ingredients.length - 1 : sceneComposer.index - 1;
     }
+    sceneComposer.ingredients[sceneComposer.index].get().rotation.x = 0.9;
     sceneComposer.ingredients[sceneComposer.index].get().position.x = 1;
 }
 

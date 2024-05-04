@@ -5,7 +5,7 @@ import SceneManager from "./SceneManager";
 import Object from '../Object';
 import bar from '../Bar';
 
-import { BottomBun, TopBun, Steak, Tomato, Lettuce } from '../Ingredient';
+import { Ingredient, BottomBun, TopBun, Steak, Tomato, Lettuce } from '../Ingredient';
 
 class SceneComposer extends AScene {
     index : any;
@@ -19,11 +19,9 @@ class SceneComposer extends AScene {
     }
 
     update(dt: number, camera: THREE.PerspectiveCamera, sceneManager: SceneManager) {
-        this.objects[this.index].get().rotation.x = 0.8;
         camera.position.z = 25;
         camera.position.y = -5;
         camera.rotation.x = 0.5;
-
     }
 
     addIngredient(ingredient: Object) {
@@ -47,9 +45,11 @@ const ingredients : any[] = [
 
 await bar1.load(sceneComposer.scene);
 sceneComposer.addObject(bar1);
+bar1.get().rotation.x = 0.8;
 for (let o of ingredients) {
     await o.load(sceneComposer.scene);
     sceneComposer.addIngredient(o);
+    o.get().rotation.x = 0.5;
 }
 
 light.position.set(0, 10, 13);
