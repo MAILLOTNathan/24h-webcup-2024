@@ -1,89 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Questern</title>
-		<style>
-:root {
-				--body-color: #010c15;
-				--text-color: #7e8294;
-				--hover-color: #ebd9ff;
-				--accent-color: #cc0404;
-				--underline-thickness: 3px;
-				color-scheme: dark;
-			  }
-
-			body {
-				height: 100vh;
-				display: grid;
-				overflow: hidden;
-				background-color: var(--body-color);
-			}
-
-			nav {
-				margin: 0;
-				margin-top: 2em;
-				padding: 0;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				text-transform: uppercase;
-				font: bold 1.5rem sans-serif;
-
-				& a {
-					color: var(--text-color);
-				    cursor: pointer;
-				    overflow: hidden;
-				    transition: 0.3s;
-				    position: relative;
-				    text-decoration: none;
-				    padding: 0 0.5em 0.25em;
-
-				  	&::before {
-						content: "";
-						scale: 0 1;
-						position: absolute;
-						background: var(--accent-color);
-						transition: 0.3s, translate 0s 0.3s;
-						inset: calc(100% - var(--underline-thickness)) 0 0 0;
-					}
-
-				  	/*&:hover {
-						color: var(--hover-color);
-
-						&::before {
-							translate: 0;
-							transition: 0.3s;
-						}
-				  	}*/
-				}
-
-				&:hover {
-				  	& a::before {
-						scale: 1;
-				  	}
-
-				  	& a:has(~ a:hover)::before {
-						translate: 100% 0;
-						transition: 0.2s 0.2s, scale 0s 0.4s;
-				  	}
-
-					& a:hover ~ a::before {
-						translate: -100% 0;
-						transition: 0.2s 0.2s, scale 0s 0.4s;
-					}
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<nav >
-			<a href="#">Home</a>
-            <a href="#">Services</a>
-            <a href="#">Pricing</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<nav class="logo">
+			<div class="crop">
+				<object data="logo.svg" type="image/svg+xml"></object>
+			</div>
 		</nav>
-		<script type="module" src="/main.js"></script>
-	</body>
+		<nav class="navigation">
+			<ul>
+				<li>Notre carte</li>
+				<li>Nos adresses</li>
+				<li>Qui sommes-nous ?</li>
+			</ul>
+		</nav>
+	</div>
+
+	<script type="module" src="/main.js"></script>
+
+	<footer class="footer">
+        <div class="container-footer">
+          <div class="footer-content">
+            <div class="footer-logo">
+				<object data="logo.svg" type="image/svg+xml"></object>
+            </div>
+            <div class="footer-links">
+              <ul class="footer-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-social">
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2024 Questern. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+</body>
 </html>
