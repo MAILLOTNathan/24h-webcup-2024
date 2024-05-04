@@ -22,10 +22,12 @@ class Saloon extends Object {
 
 class SceneStart extends AScene {
     launch: boolean;
+    dt: number;
     constructor() {
         super("start");
         this.launch = false;
         this.objects = [];
+        this.dt = 0;
     }
 
     launchAnimation() {
@@ -33,24 +35,25 @@ class SceneStart extends AScene {
     }
 
     update(camera: THREE.PerspectiveCamera, sceneManager: SceneManager) {
+        let dt = sceneManager.getClock().getDelta();
         if (!this.launch)
             return;
         for (let object of this.objects) {
-            let dt = sceneManager.getClock().getDelta();
             object.update(dt);
         }
-        if (camera.position.z > 8)
-            camera.position.z -= 0.15;
-        else if (camera.position.z < 8 && camera.position.z > 5) {
-            this.lights[0].intensity -= 0.3;
-            // this.lights[0].position.x = 0;
-            // this.lights[0].position.y = 0;
-            // this.lights[0].position.z = camera.position.z - 1;
-            camera.position.z -= 0.1;
-        } else {
-            sceneManager.changeScene("composer");
-            camera.position.z = 10;
-            camera.position.y = 2;
+        this.dt += dt;
+        if (this.dt >= 0.010) {
+            if (camera.position.z > 8)
+                camera.position.z -= 0.15;
+            else if (camera.position.z < 8 && camera.position.z > 5) {
+                this.lights[0].intensity -= 0.3;
+                camera.position.z -= 0.1;
+            } else {
+                sceneManager.changeScene("composer");
+                camera.position.z = 10;
+                camera.position.y = 2;
+            }
+            this.dt = 0;
         }
     }
 }
