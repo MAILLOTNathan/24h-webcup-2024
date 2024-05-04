@@ -7,15 +7,21 @@ class Door extends Object {
   object: any;
   leftDoor : any;
   rightDoor : any;
+  dt: number = 0;
 
   constructor(position: THREE.BoxGeometry) {
     super(position);
+    this.dt = 0;
   }
 
-  update() {
-    if (this.leftDoor.rotation.y < 1.5 && this.rightDoor.rotation.y > -1.5) {
-      this.leftDoor.rotation.y += 0.01;
-      this.rightDoor.rotation.y -= 0.01;
+  update(delta: number) {
+    this.dt += delta;
+    if (this.dt >= 0.010) {
+      if (this.leftDoor.rotation.y < 1.5 && this.rightDoor.rotation.y > -1.5) {
+        this.leftDoor.rotation.y += 0.01;
+        this.rightDoor.rotation.y -= 0.01;
+      }
+      this.dt = 0;
     }
   }
 
@@ -28,6 +34,8 @@ class Door extends Object {
     scene.add(this.rightDoor);
     this.leftDoor.position.x = -1.5;
     this.rightDoor.position.x = 1.5;
+    this.rightDoor.scale.y = 1.5;
+    this.leftDoor.scale.y = 1.5;
   }
 }
 

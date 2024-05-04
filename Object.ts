@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import loadModel from './Loader';
 
-export default class Object {
+export default abstract class Object {
     geometry : THREE.BoxGeometry;
     object : any;
 
@@ -26,4 +26,6 @@ export default class Object {
     get() {
       return this.object;
     }
+
+    abstract update(delta: number);
 }

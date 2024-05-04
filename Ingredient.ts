@@ -12,6 +12,9 @@ export class Steak extends Object {
     this.object.scale.y = 2;
     this.object.scale.z = 2;
   }
+
+  update(delta: number) {
+  }
 };
 
 export class TopBun extends Object {
@@ -20,6 +23,9 @@ export class TopBun extends Object {
   }
   public async load(scene: THREE.Scene) {
     await super.loadModel("ressource/topBun.glb", scene);
+  }
+
+  update(delta: number) {
   }
 };
 
@@ -30,6 +36,9 @@ export class BottomBun extends Object {
   public async load(scene: THREE.Scene) {
     await super.loadModel("ressource/bottomBun.glb", scene);
   }
+
+  update(delta: number) {
+  }
 };
 
 export class Lettuce extends Object {
@@ -39,6 +48,9 @@ export class Lettuce extends Object {
   public async load(scene: THREE.Scene) {
     await super.loadModel("ressource/lettuce.glb", scene);
   }
+
+  update(delta: number) {
+  }
 };
 
 export class Tomato extends Object {
@@ -47,5 +59,8 @@ export class Tomato extends Object {
   }
   public async load(scene: THREE.Scene) {
     await super.loadModel("ressource/tomato.glb", scene);
+  }
+
+  update(delta: number) {
   }
 };

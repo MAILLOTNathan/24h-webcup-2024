@@ -29,7 +29,6 @@ export default async function Composer (scene : THREE.Scene) {
     const geometry = new THREE.BoxGeometry( 0.1, 0.1, 0.1 );
     const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
     const selector = new THREE.Mesh( geometry, material );
-    let obj = new THREE.Object3D();
     selector.position.x = 3;
     obj.add(selector);
     scene.add( obj );
