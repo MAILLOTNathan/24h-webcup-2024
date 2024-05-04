@@ -34,8 +34,7 @@ class SceneStart extends AScene {
         this.launch = true;
     }
 
-    update(camera: THREE.PerspectiveCamera, sceneManager: SceneManager) {
-        let dt = sceneManager.getClock().getDelta();
+    update(dt: number, camera: THREE.PerspectiveCamera, sceneManager: SceneManager) {
         if (!this.launch)
             return;
         for (let object of this.objects) {

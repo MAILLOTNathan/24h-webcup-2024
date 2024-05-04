@@ -37,8 +37,9 @@ document.addEventListener("touchend", launchAnimation, false);
 document.addEventListener("keypress", launchAnimation, false);
 document.addEventListener("keydown", onDocumentKeyDown, false);
 function animate() {
+    let dt = sceneManager.getClock().getDelta();
     requestAnimationFrame(animate);
-    sceneManager.update();
+    sceneManager.update(dt);
     renderer.render(sceneManager.getCurrentScene().getScene(), camera);
 }
 
