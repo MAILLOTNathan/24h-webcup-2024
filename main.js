@@ -8,15 +8,13 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 25;
-camera.position.y = -5;
-camera.rotateX(0.5);
+camera.position.z = 30;
+camera.position.y = 7;
 const sceneManager = new SceneManager(camera);
 sceneManager.addScene(sceneStart);
 sceneManager.addScene(sceneComposer);
-sceneManager.changeScene("composer");
+sceneManager.changeScene("start");
 
-console.log(sceneManager.scenes)
 function onDocumentKeyDown(event) {
     var keyCode = event.key;
     console.log(sceneComposer.ingredients);
@@ -31,7 +29,6 @@ function onDocumentKeyDown(event) {
 }
 
 function launchAnimation(event) {
-    console.log(event);
     if (event.key == "Enter" || event.type == "touchend") {
         sceneStart.launchAnimation();
     }

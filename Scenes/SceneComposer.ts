@@ -38,6 +38,10 @@ class SceneComposer extends AScene {
         this.selector.get().position.y = this.objects[this.index].get().position.y;
         this.objects[this.index].get().rotation.x = 0.8;
         this.selector.update(sceneManager.dt.getDelta());
+        camera.position.z = 25;
+        camera.position.y = -5;
+        camera.rotation.x = 0.5;
+
     }
 
     addIngredient(ingredient: Object) {
