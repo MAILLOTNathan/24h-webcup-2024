@@ -115,9 +115,9 @@ export class Bread extends Object {
   }
   public async load(scene: THREE.Scene) {
     await super.loadModel("ressource/bread.glb", scene);
-    this.object.scale.x = 10;
-    this.object.scale.y = 10;
-    this.object.scale.z = 10;
+    this.object.scale.x = 20;
+    this.object.scale.y = 20;
+    this.object.scale.z = 20;
   }
 
   update(delta: number) {

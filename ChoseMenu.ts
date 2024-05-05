@@ -11,7 +11,7 @@ function frenchfries() {
     let frenchFriesModel = new FrenchFries(new THREE.BoxGeometry(0, 0, 0));
     frenchFriesModel.load(sceneComposer.scene).then(() => {
         sceneComposer.addIngredient(frenchFriesModel);
-        frenchFriesModel.setPosition(0, 0, 0);
+        frenchFriesModel.setPosition(0, 17, 0);
     });
 }
 
@@ -40,14 +40,15 @@ async function hotdog() {
     sceneComposer.removeIngredients();
 
     const ingredients : any[] = [
-        new Bread(new THREE.BoxGeometry(0, 5, 0)),
-        new Sausage(new THREE.BoxGeometry(0, 10, 0)),
+        new Bread(new THREE.BoxGeometry(0, 24, 0)),
+        new Sausage(new THREE.BoxGeometry(0, 22, 0)),
     ]
-
+    let i = 0;
     for (let o of ingredients) {
         await o.load(sceneComposer.scene);
+        o.setPosition(0, 18 + i, 0);
         sceneComposer.addIngredient(o);
-        o.get().rotation.x = 0.5;
+        i += 5;
     }
 }
 
@@ -56,8 +57,8 @@ function cake() {
 
     let cakeModel = new Cake(new THREE.BoxGeometry(0, 5, 0));
     cakeModel.load(sceneComposer.scene).then(() => {
+        cakeModel.setPosition(0, 32, 0);
         sceneComposer.addIngredient(cakeModel);
-        // cakeModel.setPosition(0, 0, 0);
     });
 }
 
