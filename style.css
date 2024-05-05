@@ -222,7 +222,7 @@ svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 75vh;
+  margin-top: 52vh;
 }
 
 .card-grid {
@@ -231,7 +231,7 @@ svg {
   grid-column-gap: var(--spacing-l);
   grid-row-gap: var(--spacing-l);
   max-width: var(--width-container);
-  width: 100%;
+  width: 55%;
 }
 
 @media (min-width: 540px) {
@@ -301,4 +301,16 @@ svg {
   text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
   line-height: 1.4;
   word-spacing: 100vw;
+}
+
+.product-details-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  background-color: transparent;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 25%;
 }

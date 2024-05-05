@@ -28,6 +28,8 @@ async function burger() {
         sceneComposer.addIngredient(o);
         o.get().rotation.x = 0.5;
     }
+
+    document.getElementById("Menu").style.display = "none";
 }
 
 async function hotdog() {
