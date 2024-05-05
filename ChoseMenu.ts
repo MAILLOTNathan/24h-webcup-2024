@@ -33,7 +33,8 @@ async function burger() {
         sceneComposer.addIngredient(o);
     }
 
-    document.getElementById("Menu").style.display = "none";
+    document.getElementById("MenuCard").style.display = "none";
+    document.getElementById("Burger").style.display = "block"
 }
 
 async function hotdog() {
@@ -57,7 +58,7 @@ function cake() {
 
     let cakeModel = new Cake(new THREE.BoxGeometry(0, 5, 0));
     cakeModel.load(sceneComposer.scene).then(() => {
-        cakeModel.setPosition(0, 32, 0);
+        cakeModel.setPosition(0, 19, 0);
         sceneComposer.addIngredient(cakeModel);
     });
 }
