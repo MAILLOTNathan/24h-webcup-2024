@@ -50,10 +50,9 @@ nav {
     border-radius: 0;
 }
 
-.crop {
-    width: 250px;
-    height: 150px;
-    overflow: hidden;
+.crop img {
+    width: 60%;
+    height: auto;
 }
 
 .crop object {
@@ -124,10 +123,9 @@ svg {
   align-items: end;
 }
 
-.footer-logo {
-    width: 125px;
-    height: 75px;
-    overflow: hidden;
+.footer-logo img {
+    width: 60%;
+    height: auto;
 }
 
 .footer-logo object {
