@@ -347,3 +347,27 @@ svg {
   align-items: center;
   margin-top: 52vh;
 }
+
+.map {
+  align-items: flex-start;
+  background-color: red;
+  font-size: large;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 52vh;
+}
+
+.map li {
+  text-decoration: underline;
+  list-style-type: none;
+}
