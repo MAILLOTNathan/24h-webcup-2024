@@ -32,6 +32,8 @@ async function burger() {
         await o.load(sceneComposer.scene);
         sceneComposer.addIngredient(o);
     }
+
+    document.getElementById("Menu").style.display = "none";
 }
 
 async function hotdog() {
