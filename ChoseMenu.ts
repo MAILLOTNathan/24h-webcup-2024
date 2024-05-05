@@ -1,6 +1,9 @@
-import sceneComposer from "./Scenes/SceneComposer";
-import { FrenchFries, BottomBun, TopBun, Steak, Tomato, Lettuce, Bread, Sausage, Cake } from "./Ingredient";
 import * as THREE from 'three';
+
+import sceneComposer from "./Scenes/SceneComposer";
+import Burger from "./Burger";
+
+import { FrenchFries, BottomBun, TopBun, Steak, Tomato, Lettuce, Bread, Sausage, Cake } from "./Ingredient";
 
 function frenchfries() {
     sceneComposer.removeIngredients();
@@ -15,18 +18,19 @@ function frenchfries() {
 async function burger() {
     sceneComposer.removeIngredients();
 
+    let burger = new Burger();
     const ingredients : any[] = [
-        new BottomBun(new THREE.BoxGeometry(0, 0, 0)),
-        new Steak(new THREE.BoxGeometry(0, 5, 0)),
-        new Lettuce(new THREE.BoxGeometry(0, 10, 0)),
-        new Tomato(new THREE.BoxGeometry(0, 15, 0)),
-        new TopBun(new THREE.BoxGeometry(0, 20, 0)),
+        new BottomBun(new THREE.BoxGeometry(-8, 35, 4)),
+        new Steak(new THREE.BoxGeometry(-8, 40, 4)),
+        new Lettuce(new THREE.BoxGeometry(-8, 45, 4)),
+        new Tomato(new THREE.BoxGeometry(-8, 50, 4)),
+        new TopBun(new THREE.BoxGeometry(-8, 55, 4)),
     ];
+    sceneComposer.setBurger(burger);
 
     for (let o of ingredients) {
         await o.load(sceneComposer.scene);
         sceneComposer.addIngredient(o);
-        o.get().rotation.x = 0.5;
     }
 
     document.getElementById("Menu").style.display = "none";
