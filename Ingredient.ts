@@ -115,9 +115,9 @@ export class Bread extends Object {
   }
   public async load(scene: THREE.Scene) {
     await super.loadModel("ressource/bread.glb", scene);
-    this.object.scale.x = 10;
-    this.object.scale.y = 10;
-    this.object.scale.z = 10;
+    this.object.scale.x = 20;
+    this.object.scale.y = 20;
+    this.object.scale.z = 20;
   }
 
   update(delta: number) {
@@ -140,9 +140,14 @@ export class Sausage extends Object {
 export class Cake extends Object {
   constructor(position : THREE.BoxGeometry) {
     super(position);
+
   }
   public async load(scene: THREE.Scene) {
     await super.loadModel("ressource/cake.glb", scene);
+    this.object.rotation.y = 1.5708
+    this.object.scale.x = 3;
+    this.object.scale.y = 3;
+    this.object.scale.z = 3;
   }
 
   update(delta: number) {
