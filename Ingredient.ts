@@ -2,7 +2,20 @@ import * as THREE from 'three';
 
 import Object from './Object';
 
-export abstract class Ingredient extends Object {
+
+export class Ingredient extends Object {
+  constructor(position : THREE.BoxGeometry) {
+    super(position);
+  }
+
+
+  update(delta: number) {
+
+  }
+
+  public async load (scene : THREE.Scene) {
+
+  }
 }
 
 export class Steak extends Ingredient  {

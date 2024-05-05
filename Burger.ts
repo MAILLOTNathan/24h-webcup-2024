@@ -1,25 +1,29 @@
 import * as THREE from 'three';
 
-// import Ingredient from './Ingredient';
+import { Ingredient } from './Ingredient';
 
-export default class Burger {
-  position : THREE.Vector3;
+export default class Burger  {
   ingredients : Ingredient[] ;
 
-  constructor(position : THREE.Vector3) {
-    this.position = position;
+  constructor() {
     this.ingredients = [];
   }
 
   addIngredient(ingredient : Ingredient) {
+    if (this.ingredients.length > 0) {
+        ingredient.get().position.y = this.ingredients[this.ingredients.length - 1].get().position.y + 1;
+    } else {
+        ingredient.get().position.y = 18;
+    }
+    ingredient.get().position.x = 5;
+    ingredient.get().position.z = 5;
     this.ingredients.push(ingredient);
   }
 
-  setPosition(position : THREE.Vector3) {
-    this.position = position;
+  removeIngredient() {
+    return this.ingredients.pop();
   }
 
-  removeIngredient(ingredient : Ingredient) {
-    this.ingredients.splice(this.ingredients.indexOf(ingredient), 1);
+  update(delta: number) {
   }
 }
