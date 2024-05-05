@@ -13,6 +13,8 @@ function frenchfries() {
         sceneComposer.addIngredient(frenchFriesModel);
         frenchFriesModel.setPosition(0, 17, 0);
     });
+    document.getElementById("MenuCard").style.display = "none";
+    document.getElementById("frite").style.display = "block";
 }
 
 async function burger() {
@@ -34,7 +36,7 @@ async function burger() {
     }
 
     document.getElementById("MenuCard").style.display = "none";
-    document.getElementById("Burger").style.display = "block"
+    document.getElementById("Burger").style.display = "block";
 }
 
 async function hotdog() {
@@ -51,6 +53,8 @@ async function hotdog() {
         sceneComposer.addIngredient(o);
         i += 5;
     }
+    document.getElementById("MenuCard").style.display = "none";
+    document.getElementById("hotdog").style.display = "block";
 }
 
 function cake() {
@@ -61,9 +65,22 @@ function cake() {
         cakeModel.setPosition(0, 19, 0);
         sceneComposer.addIngredient(cakeModel);
     });
+    document.getElementById("MenuCard").style.display = "none";
+    document.getElementById("cake").style.display = "block";
+}
+
+function reset() {
+    sceneComposer.removeIngredients();
+    document.getElementById("frite").style.display = "none";
+    document.getElementById("Burger").style.display = "none";
+    document.getElementById("hotdog").style.display = "none";
+    document.getElementById("cake").style.display = "none";
+    document.getElementById("MenuCard").style.display = "";
+
 }
 
 window.frenchfries = frenchfries;
 window.burger = burger;
 window.hotdog = hotdog;
 window.cake = cake;
+window.reset = reset;

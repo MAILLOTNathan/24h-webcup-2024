@@ -13,7 +13,11 @@ camera.position.y = 7;
 const sceneManager = new SceneManager(camera);
 sceneManager.addScene(sceneStart);
 sceneManager.addScene(sceneComposer);
-sceneManager.changeScene("composer");
+if (window.location.href.includes("carte"))
+    sceneManager.changeScene("composer");
+else
+    sceneManager.changeScene("start");
+
 
 function onDocumentKeyDown(event) {
     var keyCode = event.key;
