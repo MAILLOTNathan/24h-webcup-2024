@@ -67,29 +67,22 @@ class SceneComposer extends AScene {
         this.burger = burger;
     }
 
+    removeIngredients() {
+        for (let o of this.ingredients) {
+            this.scene.remove(o.get());
+            super.removeObject(o);
+        }
+        this.ingredients = [];
+    }
+
 };
 
 let sceneComposer = new SceneComposer();
 let light = new THREE.DirectionalLight(0xffffff, 1);
 let bar1= new bar(new THREE.BoxGeometry(0, 0, 0));
-let burger = new Burger();
-const ingredients : any[] = [
-    new BottomBun(new THREE.BoxGeometry(-8, 35, 4)),
-    new Steak(new THREE.BoxGeometry(-8, 40, 4)),
-    new Lettuce(new THREE.BoxGeometry(-8, 45, 4)),
-    new Tomato(new THREE.BoxGeometry(-8, 50, 4)),
-    new TopBun(new THREE.BoxGeometry(-8, 55, 4)),
-];
-
-sceneComposer.setBurger(burger);
 
 await bar1.load(sceneComposer.scene);
 sceneComposer.addObject(bar1);
-for (let o of ingredients) {
-    await o.load(sceneComposer.scene);
-    sceneComposer.addIngredient(o);
-}
-
 light.position.set(0, 10, 13);
 sceneComposer.addLight(light);
 export default sceneComposer;

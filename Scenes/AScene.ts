@@ -32,5 +32,17 @@ export default abstract class AScene {
         return this.name;
     }
 
+    removeObjects() {
+        for( var i = this.scene.children.length - 1; i >= 0; i--) {
+            let obj = this.scene.children[i];
+            this.scene.remove(obj);
+       }
+        this.objects = [];
+    }
+
+    removeObject(object: Object) {
+        this.objects = this.objects.filter(obj => obj !== object);
+    }
+
     abstract update(dt: number, camera: THREE.PerspectiveCamera, sceneManager: SceneManager);
 }
