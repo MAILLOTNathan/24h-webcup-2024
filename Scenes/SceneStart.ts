@@ -50,7 +50,7 @@ class SceneStart extends AScene {
                 this.lights[0].intensity -= 0.3;
                 camera.position.z -= 0.1;
             } else {
-                document.location.href = document.location.href + "cartel.html"
+                document.location.href = document.location.href + "carte.html"
                 camera.position.z = 10;
                 camera.position.y = 2;
             }
