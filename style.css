@@ -313,3 +313,38 @@ svg {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 25%;
 }
+
+/* ------------------------------------------ */
+
+.history-section {
+  align-items: flex-start;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 52vh;
+}
+
+.link-section {
+  align-items: flex-start;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: var(--spacing-xxl) var(--spacing-l);
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  margin-top: 52vh;
+}
