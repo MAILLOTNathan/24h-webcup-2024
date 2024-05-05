@@ -145,6 +145,7 @@ svg {
 
 .footer-menu li {
   display: inline-block;
+  text-decoration: underline;
   margin-right: 20px;
 }
 
@@ -305,7 +306,7 @@ svg {
   position: absolute;
   top: 0;
   right: 0;
-  width: 30%;
+  width: 20%;
   background-color: transparent;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
