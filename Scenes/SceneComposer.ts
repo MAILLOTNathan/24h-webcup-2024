@@ -89,8 +89,9 @@ let sceneComposer = new SceneComposer();
 let light = new THREE.DirectionalLight(0xf8a966, 2);
 let bar1= new bar(new THREE.BoxGeometry(10, 10, 0));
 
-await bar1.load(sceneComposer.scene);
-sceneComposer.addObject(bar1);
+bar1.load(sceneComposer.scene).then(() => {
+    sceneComposer.addObject(bar1);
+});
 light.position.set(0, 10, 13);
 sceneComposer.addLight(light);
 export default sceneComposer;

@@ -69,13 +69,20 @@ const desert = new Desert(new THREE.BoxGeometry(0, 1, 1));
 const door = new Door(new THREE.BoxGeometry(0, 10, 7));
 const material = new THREE.MeshToonMaterial( { color: 0x292929 } );
 const cube = new THREE.Mesh( new THREE.BoxGeometry( 6.2, 11, 1 ), material );
-await door.load(sceneStart.getScene());
-await desert.load(sceneStart.getScene());
-await desert.load(sceneStart.getScene());
-sceneStart.addObject(door);
+door.load(sceneStart.getScene()).then(() => {
+    sceneStart.addObject(door);
+});
+desert.load(sceneStart.getScene()).then(() => {
+    sceneStart.addObject(desert);
+});
+desert.load(sceneStart.getScene()).then(() => {
+    sceneStart.addObject(desert);
+});
 cube.position.z = 1.5;
 cube.position.y = 7;
-await saloon.load(sceneStart.getScene());
+saloon.load(sceneStart.getScene()).then(() => {
+    sceneStart.addObject(saloon);
+});
 sceneStart.scene.add(cube);
 
 export default sceneStart;
