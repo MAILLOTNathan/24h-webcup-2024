@@ -17,10 +17,90 @@
                     <a href="history.html">
                         Qui sommes-nous ?
                     </a>
+				<li>Qui sommes-nous ?</li>
+                <li>
+                    <div id="ecoindex-badge" data-theme="dark"></div>
+                    <script src="https://www.ecoindex.fr/resultat/?id=94995782-9f2d-4a66-80c2-33912deb5fe6#score-details" defer></script>
                 </li>
 			</ul>
 		</nav>
-        <div class="hero-section">
+        <div id="Burger" class="product-details-container">
+            <h2>Classic Burger</h2>
+            <p> <br>
+                <ul style="justify-content: center;">
+                    <li>
+                        pain
+                    </li>
+                    <li>
+                        tomate
+                    </li>
+                    <li>
+                        steak
+                    </li>
+                    <li>
+                        salade
+                    </li>
+                </ul>
+            <br>
+            </p>
+            <p>25$</p>
+            <a onclick="reset()">
+                <br>
+                <button>Retour au menu</button>
+            </a>
+        </div>
+        <div id="frite" class="product-details-container">
+            <h2>French Fries</h2>
+            <p> <br>
+                <ul style="justify-content: center;">
+                    <li>
+                        Pot de frite
+                    </li>
+                </ul>
+            <br>
+            </p>
+            <p>7$</p>
+            <a onclick="reset()">
+                <br>
+                <button>Retour au menu</button>
+            </a>
+        </div>
+        <div id="hotdog" class="product-details-container">
+            <h2>Classic HotDog</h2>
+            <p> <br>
+                <ul style="justify-content: center;">
+                    <li>
+                        pain
+                    </li>
+                    <li>
+                        Saucisse
+                    </li>
+                </ul>
+            <br>
+            </p>
+            <p>15$</p>
+            <a onclick="reset()">
+                <br>
+                <button>Retour au menu</button>
+            </a>
+        </div>
+        <div id="cake" class="product-details-container">
+            <h2>CheeseCake</h2>
+            <p> <br>
+                <ul style="justify-content: center;">
+                    <li>
+                        Cake
+                    </li>
+                </ul>
+            <br>
+            </p>
+            <p>10$</p>
+            <a onclick="reset()">
+                <br>
+                <button>Retour au menu</button>
+            </a>
+        </div>
+        <div id="MenuCard" class="hero-section">
             <div class="card-grid">
                 <a class="card" href="#">
                 <div class="card__background" onclick="burger()" style="background-image: url(https://assets.biggreenegg.eu/app/uploads/2019/03/28145521/topimage-classic-hamburger-2019m04-800x534.jpg)"></div>
@@ -47,7 +127,7 @@
                 <div class="card__background" onclick="cake()" style="background-image: url(https://www.galbani.fr/wp-content/uploads/2017/07/Cheesecake-au-Chocolat-Blanc-au-Four_283330787.jpeg)"></div>
                 <div class="card__content">
                     <p class="card__category">Desert</p>
-                    <h3 class="card__heading">CheeseCake</h3>
+                    <h3 class="card__heading">Cheese<br> Cake </br></h3>
                 </div>
                 </a>
                 <script type="module" src="/main.js"></script>
@@ -74,6 +154,10 @@
         <br>
         </p>
         <p>25$</p>
+        <a href="carte.html">
+            <br>
+            <button>Retour au menu</button>
+        </a>
     </div>
     <div id="frite" class="product-details-container">
         <h2>French Fries</h2>
@@ -86,6 +170,10 @@
         <br>
         </p>
         <p>7$</p>
+        <a href="carte.html">
+            <br>
+            <button>Retour au menu</button>
+        </a>
     </div>
     <div id="hotdog" class="product-details-container">
         <h2>Classic HotDog</h2>
@@ -101,6 +189,10 @@
         <br>
         </p>
         <p>15$</p>
+        <a href="carte.html">
+            <br>
+            <button>Retour au menu</button>
+        </a>
     </div>
     <div id="cake" class="product-details-container">
         <h2>CheeseCake</h2>
@@ -113,19 +205,11 @@
         <br>
         </p>
         <p>10$</p>
+        <a href="carte.html">
+            <br>
+            <button>Retour au menu</button>
+        </a>
     </div>
-    <!-- <div id="frite" class="product-details-container">
-        <h2>Détails du produit</h2>
-        <p>Description du produit...</p>
-    </div>
-    <div id="hotdog" class="product-details-container">
-        <h2>Détails du produit</h2>
-        <p>Description du produit...</p>
-    </div>
-    <div cake class="product-details-container">
-        <h2>Détails du produit</h2>
-        <p>Description du produit...</p>
-    </div> -->
     <footer class="footer">
         <div class="container-footer">
           <div class="footer-content">
@@ -134,20 +218,18 @@
             </div>
             <div class="footer-links">
               <ul class="footer-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
             </div>
-            <div class="footer-social">
-              <ul class="social-icons">
+            <!-- <div class="footer-social"> -->
+              <!-- <ul class="social-icons">
                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-              </ul>
-            </div>
+              </ul> -->
+            <!-- </div> -->
           </div>
           <div class="footer-bottom">
             <p>&copy; 2024 Questern. All rights reserved.</p>
