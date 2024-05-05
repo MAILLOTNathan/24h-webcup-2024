@@ -1,0 +1,244 @@
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+
+<script type="module" crossorigin src="/assets/carte-BOERyHdD.js"></script>
+<link rel="modulepreload" crossorigin href="/assets/main-B50zsT65.js">
+<link rel="stylesheet" crossorigin href="/assets/style-1rlsYi0C.css">
+
+<body>
+    <div class="container">
+        <nav class="logo">
+			<div class="crop">
+				<a href="index.html">
+					<img src="/assets/Questern-DSqufEI0.png"/>
+				</a>
+			</div>
+		</nav>
+		<nav class="navigation">
+			<ul>
+				<li><a href="carte.html">Notre carte</a></li>
+				<li><a href="map.html">Nos adresses</a></li>
+				<li>
+                    <a href="history.html">
+                        Qui sommes-nous ?
+                    </a>
+                    <li>
+                        <div id="ecoindex-badge" data-theme="dark"></div>
+                        <script src="https://cdn.jsdelivr.net/gh/cnumr/ecoindex_badge@3/assets/js/ecoindex-badge.js" defer></script>
+                    </li>
+			</ul>
+		</nav>
+        <div id="Burger" class="product-details-container">
+            <h2>Classic Burger</h2>
+            <p> <br>
+                Pour customiser votre burger utilisez les <strong>fleches</strong> pour selectionner les aliments.</br>
+                Utilisez la touche <strong>Entree</strong> pour ajouter l'aliment.</br>
+                Si vous souhaitez revenir en arriere sur votre composition, appuyez sur <strong>Effacer</strong>.
+                <ul style="justify-content: center;">
+                    <li>
+                        pain
+                    </li>
+                    <li>
+                        tomate
+                    </li>
+                    <li>
+                        steak
+                    </li>
+                    <li>
+                        salade
+                    </li>
+                </ul>
+            <br>
+            </p>
+            <p>25$</p>
+            <a onclick="reset()">
+                <br>
+                <button>Retour au menu</button>
+            </a>
+        </div>
+        <div id="frite" class="product-details-container">
+            <h2>French Fries</h2>
+            <p> <br>
+                <ul style="justify-content: center;">
+                    <li>
+                        Pot de frite
+                    </li>
+                </ul>
+            <br>
+            </p>
+            <p>7$</p>
+            <a onclick="reset()">
+                <br>
+                <button>Retour au menu</button>
+            </a>
+        </div>
+        <div id="hotdog" class="product-details-container">
+            <h2>Classic HotDog</h2>
+            <p> <br>
+                <ul style="justify-content: center;">
+                    <li>
+                        pain
+                    </li>
+                    <li>
+                        Saucisse
+                    </li>
+                </ul>
+            <br>
+            </p>
+            <p>15$</p>
+            <a onclick="reset()">
+                <br>
+                <button>Retour au menu</button>
+            </a>
+        </div>
+        <div id="cake" class="product-details-container">
+            <h2>CheeseCake</h2>
+            <p> <br>
+                <ul style="justify-content: center;">
+                    <li>
+                        Cake
+                    </li>
+                </ul>
+            <br>
+            </p>
+            <p>10$</p>
+            <a onclick="reset()">
+                <br>
+                <button>Retour au menu</button>
+            </a>
+        </div>
+        <div id="MenuCard" class="hero-section">
+            <div class="card-grid">
+                <a class="card" href="#" onclick="burger()">
+                <div class="card__background" style="background-image: url(https://assets.biggreenegg.eu/app/uploads/2019/03/28145521/topimage-classic-hamburger-2019m04-800x534.jpg)"></div>
+                <div class="card__content">
+                    <p class="card__category">FatFood</p>
+                    <h3 class="card__heading">Classic Burger</h3>
+                </div>
+                </a>
+                <a class="card" href="#" onclick="frenchfries()">
+                <div class="card__background" style="background-image: url(https://recipe30.com/wp-content/uploads/2017/06/French-fries.jpg)"></div>
+                <div class="card__content">
+                    <p class="card__category">FatFood</p>
+                    <h3 class="card__heading">French Fries</h3>
+                </div>
+                </a>
+                <a class="card" href="#" onclick="hotdog()">
+                <div class="card__background" style="background-image: url(https://realfood.tesco.com/media/images/1400x919-HOTDOG-11f329fc-48b2-42d2-ab14-d94a7562a9c2-0-1400x919.jpg)"></div>
+                <div class="card__content">
+                    <p class="card__category">FatFood</p>
+                    <h3 class="card__heading">Classic Hotdog</h3>
+                </div>
+                </li>
+                <a class="card" href="#" onclick="cake()">
+                <div class="card__background" style="background-image: url(https://www.galbani.fr/wp-content/uploads/2017/07/Cheesecake-au-Chocolat-Blanc-au-Four_283330787.jpeg)"></div>
+                <div class="card__content">
+                    <p class="card__category">Desert</p>
+                    <h3 class="card__heading">Cheese<br> Cake </br></h3>
+                </div>
+                </a>
+            <div>
+        </div>
+    </div>
+    <div id="burger" class="product-details-container">
+        <h2>Classic Burger</h2>
+        <p> <br>
+            <ul style="justify-content: center;">
+                <li>
+                    pain
+                </li>
+                <li>
+                    tomate
+                </li>
+                <li>
+                    steak
+                </li>
+                <li>
+                    salade
+                </li>
+            </ul>
+        <br>
+        </p>
+        <p>25$</p>
+        <a href="carte.html">
+            <br>
+            <button>Retour au menu</button>
+        </a>
+    </div>
+    <div id="frite" class="product-details-container">
+        <h2>French Fries</h2>
+        <p> <br>
+            <ul style="justify-content: center;">
+                <li>
+                    Pot de frite
+                </li>
+            </ul>
+        <br>
+        </p>
+        <p>7$</p>
+        <a href="carte.html">
+            <br>
+            <button>Retour au menu</button>
+        </a>
+    </div>
+    <div id="hotdog" class="product-details-container">
+        <h2>Classic HotDog</h2>
+        <p> <br>
+            <ul style="justify-content: center;">
+                <li>
+                    pain
+                </li>
+                <li>
+                    Saucisse
+                </li>
+            </ul>
+        <br>
+        </p>
+        <p>15$</p>
+        <a href="carte.html">
+            <br>
+            <button>Retour au menu</button>
+        </a>
+    </div>
+    <div id="cake" class="product-details-container">
+        <h2>CheeseCake</h2>
+        <p> <br>
+            <ul style="justify-content: center;">
+                <li>
+                    Cake
+                </li>
+            </ul>
+        <br>
+        </p>
+        <p>10$</p>
+        <a href="carte.html">
+            <br>
+            <button>Retour au menu</button>
+        </a>
+    </div>
+    <footer class="footer">
+        <div class="container-footer">
+          <div class="footer-content">
+            <div class="footer-logo">
+            </div>
+            <div class="footer-links">
+              <ul class="footer-menu">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <!-- <div class="footer-social">
+              <ul class="social-icons">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div> -->
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2024 Questern. All rights reserved.</p>
+          </div>
+        </div>
+  </footer>
+</body>
+
