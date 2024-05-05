@@ -19,6 +19,7 @@ class SceneComposer extends AScene {
         this.objects = [];
         this.ingredients = [];
         this.index = 0;
+        this.scene.background = new THREE.Color(0xe69138);
     }
 
     update(dt: number, camera: THREE.PerspectiveCamera, sceneManager: SceneManager) {
@@ -78,8 +79,8 @@ class SceneComposer extends AScene {
 };
 
 let sceneComposer = new SceneComposer();
-let light = new THREE.DirectionalLight(0xffffff, 1);
-let bar1= new bar(new THREE.BoxGeometry(0, 0, 0));
+let light = new THREE.DirectionalLight(0xf8a966, 2);
+let bar1= new bar(new THREE.BoxGeometry(10, 10, 0));
 
 await bar1.load(sceneComposer.scene);
 sceneComposer.addObject(bar1);
