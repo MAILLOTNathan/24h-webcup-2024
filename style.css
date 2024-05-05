@@ -21,6 +21,10 @@
   color-scheme: dark;
 }
 
+.enter {
+  
+}
+
 .container {
   position: absolute;
   width: 100%;
@@ -86,7 +90,7 @@ nav ul li a {
 }
 
 nav ul li a:visited {
-  color:#fff;
+  color:#ffffff;
 }
 
 svg {
