@@ -69,6 +69,13 @@ class SceneComposer extends AScene {
     }
 
     removeIngredients() {
+        if (this.burger !== undefined) {
+            while (this.burger.ingredients.length > 0) {
+                let o = this.burger.removeIngredient();
+                this.scene.remove(o.get());
+                super.removeObject(o);
+            }
+        }
         for (let o of this.ingredients) {
             this.scene.remove(o.get());
             super.removeObject(o);
